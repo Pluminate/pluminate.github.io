@@ -10,6 +10,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --bg:#ffffff; --bg-alt:#f6f4fa; --text:#14101f; --text-muted:#514a63; --brand:#4b1d7a; --accent:#7b2cbf; --border:#e6e1ee; }
         :root[data-theme="dark"] { --bg:#0e0a16; --bg-alt:#151020; --text:#ece8f4; --text-muted:#a79fb8; --brand:#ffffff; --accent:#c08bff; --border:#251d36; }
+        html { scroll-behavior: smooth; }
         body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); }
         a { color:var(--accent); }
         code { font-size:.9em; padding:1px 5px; border-radius:4px; background:var(--bg-alt); border:1px solid var(--border); }
@@ -53,14 +54,15 @@
     </style>
 </head>
 <body>
-    <header>
+        <header>
         <div class="container">
-            <a class="brand" href="/">PLUMINATE</a>
+            <a class="brand" href="index.html">PLUMINATE</a>
             <nav>
-                <a href="/">Products</a>
-                <a href="plumterm.html">PlumTerm</a>
+                <a href="index.html#products">Products</a>
+                <a href="ide.html">Pluminate IDE</a>
+                <a href="plumterm.html" class="active">PlumTerm</a>
                 <a href="privacy.html">Privacy</a>
-                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode"></button>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
             </nav>
         </div>
     </header>
@@ -111,10 +113,16 @@
             </div>
         </section>
     </main>
-    <footer>
+        <footer>
         <div class="container">
-            <span>&copy; 2026 <strong>Landoulsi Technologies FZE LLC</strong>, trading as Pluminate. All rights reserved.</span>
-            <span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="mailto:plumterm@pluminate.com">plumterm@pluminate.com</a></span>
+            <span>&copy; 2026 <strong>Pluminate</strong>. All rights reserved.</span>
+            <div class="footer-links">
+                <a href="ide.html">Pluminate IDE</a>
+                <a href="plumterm.html">PlumTerm</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:contact@pluminate.com">contact@pluminate.com</a>
+            </div>
         </div>
     </footer>
 <script>

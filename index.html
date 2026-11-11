@@ -3,103 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pluminate makes fast, focused developer tools, starting with PlumTerm, a terminal with split panes and built-in git status.">
-    <title>Pluminate — Developer Tools</title>
+    <meta name="description" content="Pluminate Lite is a native, fully sandboxed code editor for macOS with syntax highlighting, fast ripgrep search and Markdown preview. No accounts, no tracking.">
+    <title>Pluminate Lite — a native code editor for macOS</title>
     <script>(function(){var t="light";try{t=localStorage.getItem("theme")==="dark"?"dark":"light";}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --bg:#ffffff; --bg-alt:#f6f4fa; --text:#14101f; --text-muted:#514a63; --brand:#4b1d7a; --accent:#7b2cbf; --border:#e6e1ee; }
-        :root[data-theme="dark"] { --bg:#0e0a16; --bg-alt:#151020; --text:#ece8f4; --text-muted:#a79fb8; --brand:#ffffff; --accent:#c08bff; --border:#251d36; }
-        body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); }
-        a { color:var(--accent); }
-        code { font-size:.9em; padding:1px 5px; border-radius:4px; background:var(--bg-alt); border:1px solid var(--border); }
-        .container { max-width:1040px; margin:0 auto; padding:0 16px; }
-        header { border-bottom:1px solid var(--border); }
-        header .container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:18px; padding-bottom:18px; }
-        .brand { text-decoration:none; color:var(--brand); font-family:"Trebuchet MS","Helvetica Neue",Arial,sans-serif; font-size:1.8rem; font-weight:800; letter-spacing:.12em; }
-        nav { display:flex; align-items:center; }
-        nav a { color:var(--text-muted); text-decoration:none; margin-left:20px; font-size:.95rem; }
-        nav a:hover { color:var(--accent); }
-        .theme-toggle { display:inline-flex; align-items:center; justify-content:center; margin-left:20px; padding:6px 10px; border:1px solid var(--border); border-radius:6px; background:none; color:var(--text-muted); cursor:pointer; }
-        .theme-toggle:hover { color:var(--accent); border-color:var(--accent); }
-        .hero { padding:80px 0 64px; }
-        .hero h1 { font-size:clamp(2rem,5vw,3.1rem); line-height:1.15; max-width:860px; margin-bottom:18px; }
-        .hero p { font-size:1.15rem; color:var(--text-muted); max-width:720px; margin-bottom:28px; }
-        .button { display:inline-block; background:var(--accent); color:#fff; padding:12px 22px; border-radius:6px; text-decoration:none; font-weight:600; }
-        .button:hover { opacity:.9; }
-        .button.secondary { background:none; color:var(--accent); border:1px solid var(--accent); margin-left:10px; }
-        section { padding:56px 0; border-top:1px solid var(--border); }
-        section.alt { background:var(--bg-alt); }
-        section h2 { font-size:1.6rem; margin-bottom:12px; }
-        section h3 { font-size:1.15rem; margin:26px 0 10px; }
-        section p { color:var(--text-muted); max-width:720px; margin-bottom:16px; }
-        section ul { margin:0 0 20px 20px; color:var(--text-muted); max-width:720px; }
-        section li { margin-bottom:6px; }
-        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
-        .card { background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:24px; }
-        .card h3 { margin:0 0 8px; }
-        .card p { font-size:.95rem; margin-bottom:0; }
-        .card a.card-link { display:inline-block; margin-top:12px; font-weight:600; text-decoration:none; }
-        .badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-        .badge { display:inline-block; padding:3px 10px; border:1px solid var(--border); border-radius:999px; font-size:.8rem; color:var(--text-muted); }
-        footer { border-top:1px solid var(--border); padding:24px 0; color:var(--text-muted); font-size:.9rem; }
-        footer .container { display:flex; flex-direction:column; gap:8px; }
-        footer a { color:var(--text-muted); margin-right:16px; }
-        .doc { max-width:760px; margin:0 auto; padding:48px 16px; }
-        .doc h1 { margin-bottom:8px; }
-        .doc h2 { font-size:1.2rem; margin:28px 0 8px; }
-        .doc p { color:var(--text-muted); margin-bottom:12px; }
-        @media (max-width:600px) { nav a { margin-left:14px; } .hero { padding:52px 0 44px; } }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <a class="brand" href="/">PLUMINATE</a>
+            <a class="brand" href="index.html">PLUMINATE</a>
             <nav>
-                <a href="/">Products</a>
-                <a href="plumterm.html">PlumTerm</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#screenshots">Screenshots</a>
+                <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy</a>
-                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode"></button>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
             </nav>
         </div>
     </header>
     <main>
         <div class="hero">
             <div class="container">
-                <h1>Fast, focused tools for developers.</h1>
-                <p>Pluminate makes developer tools that stay out of your way. Our first product is PlumTerm, a terminal with split panes and built-in git status.</p>
-                <a class="button" href="plumterm.html">Meet PlumTerm</a>
+                <div class="pill-badge"><span class="dot"></span> Mac App Store &middot; Sandboxed Edition</div>
+                <h1>Pluminate Lite: a native code editor for macOS.</h1>
+                <p class="lead">Open the folders you choose and get straight to work: syntax highlighting, fast search powered by bundled ripgrep, Markdown preview and light and dark themes. Fully sandboxed, with no accounts and no tracking.</p>
+                <div class="cta-row">
+                    <!-- TODO: replace href with the Mac App Store listing URL once the app is live -->
+                    <a class="button appstore-btn" href="#TODO-mac-app-store-url">Download on the Mac App Store</a>
+                    <a class="button secondary" href="#features">See features</a>
+                </div>
+                <p class="cta-note">The App Store listing is not live yet.</p>
+                <img class="shot hero-shot" src="images/01-editor-dark.webp" alt="Pluminate Lite editing a TypeScript file in the dark theme, with the project tree on the left" width="1600" height="1000">
             </div>
         </div>
-        <section id="products" class="alt">
+
+        <section id="features" class="alt">
             <div class="container">
-                <h2>Products</h2>
+                <h2>Focused, fast and private</h2>
+                <p class="lead">Everything you need to read and edit code, and nothing running in the background.</p>
                 <div class="grid">
                     <div class="card">
-                        <h3>PlumTerm</h3>
-                        <p>A fast terminal for developers, with tabs, split panes and git branch, changes and pull requests shown in every pane.</p>
-                        <div class="badges"><span class="badge">Free</span><span class="badge">Linux</span><span class="badge">macOS</span></div>
-                        <a class="card-link" href="plumterm.html">Learn more &rarr;</a>
+                        <h3>Syntax highlighting</h3>
+                        <p>Clear, readable highlighting for the languages you work in, with line numbers, code folding and indent guides.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Fast search</h3>
+                        <p>Search across a whole folder in an instant, powered by a bundled copy of ripgrep.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Markdown preview</h3>
+                        <p>Switch between code, split and preview views to see rendered Markdown as you write.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Light and dark themes</h3>
+                        <p>Follow the system appearance or pick a theme yourself, with editor font and size under your control.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Fully sandboxed</h3>
+                        <p>Runs inside the macOS App Sandbox and only touches the folders you open through the system open panel.</p>
+                    </div>
+                    <div class="card">
+                        <h3>No accounts, no tracking</h3>
+                        <p>No sign-in, analytics, ads or telemetry. Your code never leaves your Mac. <a href="privacy.html">Read the privacy policy</a>.</p>
                     </div>
                 </div>
-                <p style="margin-top:28px;margin-bottom:0;">More products will be listed here as they are released.</p>
             </div>
         </section>
+
+        <section id="screenshots">
+            <div class="container">
+                <h2>See it in action</h2>
+                <p class="lead">A calm, native interface that stays out of your way.</p>
+                <div class="showcase-grid">
+                    <div class="showcase-item">
+                        <div class="showcase-desc">
+                            <h3>Write Markdown with a live preview</h3>
+                            <p>Edit the source on one side and watch the rendered document update on the other, including tables, lists and code blocks.</p>
+                        </div>
+                        <div class="showcase-shot"><img class="shot" src="images/03-markdown-split.webp" alt="Pluminate Lite in split view with Markdown source on the left and the rendered preview on the right" width="1600" height="1000" loading="lazy"></div>
+                    </div>
+                    <div class="showcase-item reverse">
+                        <div class="showcase-desc">
+                            <h3>Light or dark, your call</h3>
+                            <p>A polished light theme sits alongside the dark one, so the editor fits your desk, your room and your habits.</p>
+                        </div>
+                        <div class="showcase-shot"><img class="shot" src="images/02-editor-light.webp" alt="Pluminate Lite editing a TypeScript file in the light theme" width="1600" height="1000" loading="lazy"></div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-desc">
+                            <h3>Make it yours</h3>
+                            <p>Choose the interface theme, editor color scheme, font family, size and line height, with a live preview as you adjust.</p>
+                        </div>
+                        <div class="showcase-shot"><img class="shot" src="images/10-settings-appearance-dark.webp" alt="The Appearance settings panel with theme, color scheme and editor font options" width="1600" height="1000" loading="lazy"></div>
+                    </div>
+                </div>
+                <div class="gallery" style="margin-top: 52px;">
+                    <figure><img class="shot" src="images/06-python-dark.webp" alt="A Python script open in Pluminate Lite with syntax highlighting" width="1600" height="1000" loading="lazy"><figcaption>Python with syntax highlighting.</figcaption></figure>
+                    <figure><img class="shot" src="images/05-markdown-light.webp" alt="Markdown file in split view in the light theme, showing a rendered table" width="1600" height="1000" loading="lazy"><figcaption>Markdown preview in the light theme.</figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="container">
+                <h2>Get Pluminate Lite</h2>
+                <p class="lead">Coming soon to the Mac App Store. Need a hand in the meantime? Visit <a href="support.html">Support</a> or read how we handle <a href="privacy.html">privacy</a>.</p>
+                <div class="cta-row">
+                    <!-- TODO: replace href with the Mac App Store listing URL once the app is live -->
+                    <a class="button appstore-btn" href="#TODO-mac-app-store-url">Download on the Mac App Store</a>
+                    <a class="button secondary" href="support.html">Support</a>
+                    <a class="button secondary" href="privacy.html">Privacy</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other editions and products: re-enable when released.
+             Preserved from the previous version of this page (Pluminate IDE Free/Pro and PlumTerm).
+        <section id="products" class="alt">
+            <div class="container">
+                <h2>Our Products</h2>
+                <p class="lead">Native software crafted for developer productivity, without Electron overhead or background bloat.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Pluminate IDE</h3>
+                        <p>A native, fast IDE with project tree, syntax highlighting, integrated terminal, visual git workflow, and live Markdown preview. Available in Lite, Free, and Pro editions.</p>
+                        <div class="badges">
+                            <span class="badge">macOS</span>
+                            <span class="badge">Rust Core</span>
+                            <span class="badge">Lite · Free · Pro</span>
+                        </div>
+                        <a class="card-link" href="ide.html">Learn more about Pluminate IDE &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>PlumTerm</h3>
+                        <p>A fast terminal emulator for developers, featuring flexible split panes, tabs, and git status tracking directly inside every terminal pane.</p>
+                        <div class="badges">
+                            <span class="badge">macOS</span>
+                            <span class="badge">Linux</span>
+                            <span class="badge">Free</span>
+                        </div>
+                        <a class="card-link" href="plumterm.html">Learn more about PlumTerm &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
     </main>
     <footer>
         <div class="container">
-            <span>&copy; 2026 <strong>Landoulsi Technologies FZE LLC</strong>, trading as Pluminate. All rights reserved.</span>
-            <span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="mailto:plumterm@pluminate.com">plumterm@pluminate.com</a></span>
+            <span>&copy; 2026 Landoulsi Technologies FZE LLC</span>
+            <div class="footer-links">
+                <a href="index.html">Pluminate Lite</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
+            </div>
         </div>
     </footer>
-<script>
-(function(){var b=document.getElementById("theme-toggle");if(!b)return;
-var M='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-var S='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
-function apply(t){document.documentElement.setAttribute("data-theme",t);var n=t==="dark"?"light":"dark";b.innerHTML=n==="dark"?M:S;b.setAttribute("aria-label","Switch to "+n+" mode");}
-apply(document.documentElement.getAttribute("data-theme"));
-b.addEventListener("click",function(){var t=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";apply(t);try{localStorage.setItem("theme",t);}catch(e){}});})();
-</script>
+    <script src="site.js"></script>
 </body>
 </html>

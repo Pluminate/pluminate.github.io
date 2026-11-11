@@ -6,73 +6,30 @@
     <meta name="description" content="Terms of use for the Pluminate website.">
     <title>Terms of Use — Pluminate</title>
     <script>(function(){var t="light";try{t=localStorage.getItem("theme")==="dark"?"dark":"light";}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --bg:#ffffff; --bg-alt:#f6f4fa; --text:#14101f; --text-muted:#514a63; --brand:#4b1d7a; --accent:#7b2cbf; --border:#e6e1ee; }
-        :root[data-theme="dark"] { --bg:#0e0a16; --bg-alt:#151020; --text:#ece8f4; --text-muted:#a79fb8; --brand:#ffffff; --accent:#c08bff; --border:#251d36; }
-        body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); }
-        a { color:var(--accent); }
-        code { font-size:.9em; padding:1px 5px; border-radius:4px; background:var(--bg-alt); border:1px solid var(--border); }
-        .container { max-width:1040px; margin:0 auto; padding:0 16px; }
-        header { border-bottom:1px solid var(--border); }
-        header .container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:18px; padding-bottom:18px; }
-        .brand { text-decoration:none; color:var(--brand); font-family:"Trebuchet MS","Helvetica Neue",Arial,sans-serif; font-size:1.8rem; font-weight:800; letter-spacing:.12em; }
-        nav { display:flex; align-items:center; }
-        nav a { color:var(--text-muted); text-decoration:none; margin-left:20px; font-size:.95rem; }
-        nav a:hover { color:var(--accent); }
-        .theme-toggle { display:inline-flex; align-items:center; justify-content:center; margin-left:20px; padding:6px 10px; border:1px solid var(--border); border-radius:6px; background:none; color:var(--text-muted); cursor:pointer; }
-        .theme-toggle:hover { color:var(--accent); border-color:var(--accent); }
-        .hero { padding:80px 0 64px; }
-        .hero h1 { font-size:clamp(2rem,5vw,3.1rem); line-height:1.15; max-width:860px; margin-bottom:18px; }
-        .hero p { font-size:1.15rem; color:var(--text-muted); max-width:720px; margin-bottom:28px; }
-        .button { display:inline-block; background:var(--accent); color:#fff; padding:12px 22px; border-radius:6px; text-decoration:none; font-weight:600; }
-        .button:hover { opacity:.9; }
-        .button.secondary { background:none; color:var(--accent); border:1px solid var(--accent); margin-left:10px; }
-        section { padding:56px 0; border-top:1px solid var(--border); }
-        section.alt { background:var(--bg-alt); }
-        section h2 { font-size:1.6rem; margin-bottom:12px; }
-        section h3 { font-size:1.15rem; margin:26px 0 10px; }
-        section p { color:var(--text-muted); max-width:720px; margin-bottom:16px; }
-        section ul { margin:0 0 20px 20px; color:var(--text-muted); max-width:720px; }
-        section li { margin-bottom:6px; }
-        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
-        .card { background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:24px; }
-        .card h3 { margin:0 0 8px; }
-        .card p { font-size:.95rem; margin-bottom:0; }
-        .card a.card-link { display:inline-block; margin-top:12px; font-weight:600; text-decoration:none; }
-        .badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-        .badge { display:inline-block; padding:3px 10px; border:1px solid var(--border); border-radius:999px; font-size:.8rem; color:var(--text-muted); }
-        footer { border-top:1px solid var(--border); padding:24px 0; color:var(--text-muted); font-size:.9rem; }
-        footer .container { display:flex; flex-direction:column; gap:8px; }
-        footer a { color:var(--text-muted); margin-right:16px; }
-        .doc { max-width:760px; margin:0 auto; padding:48px 16px; }
-        .doc h1 { margin-bottom:8px; }
-        .doc h2 { font-size:1.2rem; margin:28px 0 8px; }
-        .doc p { color:var(--text-muted); margin-bottom:12px; }
-        @media (max-width:600px) { nav a { margin-left:14px; } .hero { padding:52px 0 44px; } }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <a class="brand" href="/">PLUMINATE</a>
+            <a class="brand" href="index.html">PLUMINATE</a>
             <nav>
-                <a href="/">Products</a>
-                <a href="plumterm.html">PlumTerm</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#screenshots">Screenshots</a>
+                <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy</a>
-                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode"></button>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
             </nav>
         </div>
     </header>
-<main class="doc">
-        <p><a href="/">&larr; Back to home</a></p>
+    <main class="doc">
+        <p><a href="index.html">&larr; Back to home</a></p>
         <h1>Terms of Use</h1>
-        <p>Last updated: October 2026</p>
-        <p>This website is provided by <strong>Landoulsi Technologies FZE LLC</strong>, trading as Pluminate, for general information about our products. By using it, you agree to these terms.</p>
+        <p>Last updated: 11 November 2026</p>
+        <p>This website is provided by <strong>Landoulsi Technologies FZE LLC</strong> for general information about Pluminate Lite. By using it, you agree to these terms.</p>
         <h2>Software</h2>
-        <p>PlumTerm is licensed separately. The source code is under the PolyForm Strict License 1.0.0 and the compiled app is under the End-User Terms, both published in the <a href="https://github.com/pluminate/plumterm">PlumTerm repository</a>.</p>
+        <p>Pluminate Lite is distributed through the Mac App Store and is subject to Apple's Standard End User License Agreement unless a custom license is stated on its App Store listing.</p>
         <h2>Intellectual property</h2>
-        <p>The content of this website, including text, design and branding, belongs to Landoulsi Technologies FZE LLC or its licensors. "Pluminate" and "PlumTerm" are names of the publisher. You may not reproduce the content without permission, except for personal, non-commercial use.</p>
+        <p>The content of this website, including text, design and branding, belongs to Landoulsi Technologies FZE LLC or its licensors. You may not reproduce it without permission, except for personal, non-commercial use.</p>
         <h2>Disclaimer</h2>
         <p>This website is provided "as is", without warranties of any kind. We do not guarantee that it will be uninterrupted or error-free.</p>
         <h2>Limitation of liability</h2>
@@ -80,21 +37,40 @@
         <h2>Changes</h2>
         <p>We may update these terms at any time. The date at the top of this page shows when they were last changed.</p>
         <h2>Contact</h2>
-        <p>Landoulsi Technologies FZE LLC, trading as Pluminate<br>Email: plumterm@pluminate.com<br>Address: BC-893757, 26th Floor, Amber Gem Tower, Ajman, United Arab Emirates</p>
+        <p>Landoulsi Technologies FZE LLC<br>Email: <a href="mailto:hello@pluminate.com">hello@pluminate.com</a></p>
+        <!-- Previous terms text (covered PlumTerm licensing): re-enable when released.
+<main class="doc">
+        <p><a href="index.html">&larr; Back to home</a></p>
+        <h1>Terms of Use</h1>
+        <p>Last updated: October 2026</p>
+        <p>This website is provided by <strong>Pluminate</strong>, for general information about our products. By using it, you agree to these terms.</p>
+        <h2>Software</h2>
+        <p>PlumTerm is licensed separately. The source code is under the PolyForm Strict License 1.0.0 and the compiled app is under the End-User Terms, both published in the <a href="https://github.com/pluminate/plumterm">PlumTerm repository</a>.</p>
+        <h2>Intellectual property</h2>
+        <p>The content of this website, including text, design and branding, belongs to Pluminate or its licensors. "Pluminate" and "PlumTerm" are names of the publisher. You may not reproduce the content without permission, except for personal, non-commercial use.</p>
+        <h2>Disclaimer</h2>
+        <p>This website is provided "as is", without warranties of any kind. We do not guarantee that it will be uninterrupted or error-free.</p>
+        <h2>Limitation of liability</h2>
+        <p>To the extent permitted by law, Pluminate is not liable for any loss arising from your use of this website.</p>
+        <h2>Changes</h2>
+        <p>We may update these terms at any time. The date at the top of this page shows when they were last changed.</p>
+        <h2>Contact</h2>
+        <p>Pluminate<br>Email: contact@pluminate.com</p>
 </main>
+        -->
+    </main>
     <footer>
         <div class="container">
-            <span>&copy; 2026 <strong>Landoulsi Technologies FZE LLC</strong>, trading as Pluminate. All rights reserved.</span>
-            <span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="mailto:plumterm@pluminate.com">plumterm@pluminate.com</a></span>
+            <span>&copy; 2026 Landoulsi Technologies FZE LLC</span>
+            <div class="footer-links">
+                <a href="index.html">Pluminate Lite</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
+            </div>
         </div>
     </footer>
-<script>
-(function(){var b=document.getElementById("theme-toggle");if(!b)return;
-var M='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-var S='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
-function apply(t){document.documentElement.setAttribute("data-theme",t);var n=t==="dark"?"light":"dark";b.innerHTML=n==="dark"?M:S;b.setAttribute("aria-label","Switch to "+n+" mode");}
-apply(document.documentElement.getAttribute("data-theme"));
-b.addEventListener("click",function(){var t=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";apply(t);try{localStorage.setItem("theme",t);}catch(e){}});})();
-</script>
+    <script src="site.js"></script>
 </body>
 </html>
