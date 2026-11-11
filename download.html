@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Pluminate for macOS and Linux</title>
+    <meta name="description" content="Download Pluminate for free: signed and notarized for Apple silicon and Intel Macs, and as .deb packages for Debian and Ubuntu.">
+    <meta name="theme-color" content="#120d1b">
+    <link rel="icon" type="image/png" href="images/icon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://pluminate.com/download.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Download Pluminate">
+    <meta property="og:description" content="Free for macOS (Apple silicon and Intel) and Debian or Ubuntu.">
+    <meta property="og:image" content="https://pluminate.com/images/og.png">
+    <script>(function(){var t;try{t=localStorage.getItem("theme");}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.className="js";})();</script>
+    <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+        <div class="container">
+            <a class="brand" href="index.html"><img src="images/icon-64.png" alt="" width="30" height="30">Pluminate</a>
+            <nav aria-label="Main">
+                <a href="index.html#why">Why Pluminate</a>
+                <a href="index.html#tour">Tour</a>
+                <a href="index.html#roadmap">Roadmap</a>
+                <a href="support.html">Support</a>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+                <a class="nav-cta active" href="download.html" aria-current="page">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="page-head">
+            <div class="container">
+                <h1>Download Pluminate</h1>
+                <p>Free for macOS and Linux. The Mac builds are signed and notarized by Apple, so they open without security warnings.</p>
+
+                <div class="reco" id="reco" hidden>
+                    <h2>Recommended for this computer: <span id="reco-name"></span></h2>
+                    <p id="reco-hint" hidden>We cannot always tell which Mac chip you have. If the file will not open, pick the other Mac download below. To check, choose Apple menu &rarr; About This Mac: a chip named Apple M1 or later is Apple silicon, and anything that says Intel is Intel.</p>
+                    <div class="cta-row"><a class="button" id="reco-link" href="#all">Download</a><a class="button secondary" href="#all">All downloads</a></div>
+                </div>
+            </div>
+        </div>
+
+        <section id="all" style="padding-top: 28px;">
+            <div class="container">
+                <h2 style="font-size: 1.7rem;">All downloads</h2>
+                <p class="lead" style="margin-bottom: 28px;">Version 0.1, the latest release. Every link below always points to the newest version.</p>
+                <ul class="dl-list">
+                    <li class="dl-row" data-pkg="dmg-arm64" data-label="macOS, Apple silicon" data-ext=".dmg" data-href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-arm64.dmg">
+                        <div>
+                            <h3>macOS, Apple silicon</h3>
+                            <p>For Macs with an M-series chip. Requires macOS 12 or later.</p>
+                            <span class="file">Pluminate-arm64.dmg</span>
+                        </div>
+                        <a class="button" href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-arm64.dmg">Download .dmg</a>
+                    </li>
+                    <li class="dl-row" data-pkg="dmg-x86_64" data-label="macOS, Intel" data-ext=".dmg" data-href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-x86_64.dmg">
+                        <div>
+                            <h3>macOS, Intel</h3>
+                            <p>For Macs with an Intel processor. Requires macOS 12 or later.</p>
+                            <span class="file">Pluminate-x86_64.dmg</span>
+                        </div>
+                        <a class="button" href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-x86_64.dmg">Download .dmg</a>
+                    </li>
+                    <li class="dl-row" data-pkg="deb-amd64" data-label="Debian and Ubuntu, 64-bit Intel or AMD" data-ext=".deb" data-href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/pluminate_amd64.deb">
+                        <div>
+                            <h3>Debian and Ubuntu, amd64</h3>
+                            <p>For 64-bit Intel and AMD PCs. Requires Debian 13 or Ubuntu 25.04 or later.</p>
+                            <span class="file">pluminate_amd64.deb</span>
+                        </div>
+                        <a class="button" href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/pluminate_amd64.deb">Download .deb</a>
+                    </li>
+                    <li class="dl-row" data-pkg="deb-arm64" data-label="Debian and Ubuntu, 64-bit ARM" data-ext=".deb" data-href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/pluminate_arm64.deb">
+                        <div>
+                            <h3>Debian and Ubuntu, arm64</h3>
+                            <p>For 64-bit ARM machines such as Raspberry Pi 5 and ARM servers. Requires Debian 13 or Ubuntu 25.04 or later.</p>
+                            <span class="file">pluminate_arm64.deb</span>
+                        </div>
+                        <a class="button" href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/pluminate_arm64.deb">Download .deb</a>
+                    </li>
+                </ul>
+                <p class="cta-note" style="margin-top: 16px;">Release notes and older versions are on the <a href="https://github.com/Pluminate/pluminate-releases/releases">releases page</a>.</p>
+            </div>
+        </section>
+
+        <section class="alt" id="install">
+            <div class="container">
+                <h2 style="font-size: 1.7rem;">Install</h2>
+                <div class="two-up" style="margin-top: 28px;">
+                    <div>
+                        <h3>macOS</h3>
+                        <ol class="steps">
+                            <li>Open the downloaded <code>.dmg</code>.</li>
+                            <li>Drag Pluminate onto the Applications folder.</li>
+                            <li>Open Pluminate from Applications or Launchpad, then choose File &rarr; Open Folder.</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>Debian and Ubuntu</h3>
+                        <p style="color: var(--muted);">Install with apt, which also installs the Qt libraries and ripgrep it needs:</p>
+                        <pre class="cmd">sudo apt install ./pluminate_amd64.deb</pre>
+                        <p style="color: var(--muted);">Then start it from your application menu, or run <code>pluminate</code> in a terminal. To remove it, run <code>sudo apt remove pluminate</code>.</p>
+                    </div>
+                </div>
+                <div class="note-box"><strong>Ubuntu 24.04 LTS and older:</strong> not supported yet, because those releases ship an older version of Qt than Pluminate needs.</div>
+            </div>
+        </section>
+
+        <section id="appstore">
+            <div class="container">
+                <h2 style="font-size: 1.7rem;">Prefer the Mac App Store?</h2>
+                <p class="lead" style="margin-bottom: 0;"><strong>Pluminate Lite</strong> is a focused, sandboxed editor with syntax highlighting, fast search and Markdown preview. It is coming soon to the Mac App Store. The downloads above are the full Pluminate IDE with Git, a terminal and code navigation. <a href="index.html#editions">Compare the two</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <div class="footer-brand">Pluminate</div>
+                <div>A native IDE for macOS and Linux, from Landoulsi Technologies FZE LLC.</div>
+            </div>
+            <div class="footer-cols">
+                <a href="download.html">Download</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+                <a href="notices.html">Open-source notices</a>
+                <a href="plumterm.html">PlumTerm</a>
+                <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
+            </div>
+            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
+        </div>
+    </footer>
+    <script src="site.js"></script>
+</body>
+</html>

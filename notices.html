@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open-source notices: Pluminate</title>
+    <meta name="description" content="Third-party software and fonts used by Pluminate and this website, with their licenses.">
+    <meta name="theme-color" content="#120d1b">
+    <link rel="icon" type="image/png" href="images/icon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://pluminate.com/notices.html">
+    <script>(function(){var t;try{t=localStorage.getItem("theme");}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.className="js";})();</script>
+    <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+        <div class="container">
+            <a class="brand" href="index.html"><img src="images/icon-64.png" alt="" width="30" height="30">Pluminate</a>
+            <nav aria-label="Main">
+                <a href="index.html#why">Why Pluminate</a>
+                <a href="index.html#tour">Tour</a>
+                <a href="index.html#roadmap">Roadmap</a>
+                <a href="support.html">Support</a>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+                <a class="nav-cta" href="download.html">Download</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="doc">
+        <a class="back" href="index.html">&larr; Back to home</a>
+        <h1>Open-source notices</h1>
+        <p class="meta">Last updated: 11 November 2026</p>
+        <p>Pluminate is built with the help of open-source software. This page lists the main components and the licenses they are used under. It is not an exhaustive list of every transitive dependency.</p>
+
+        <h2>Qt</h2>
+        <p>Pluminate's interface is built with the <a href="https://www.qt.io">Qt</a> toolkit (including Qt WebEngine in Pluminate Free), used under the GNU Lesser General Public License version 3 (LGPLv3). Qt is linked dynamically and shipped as separate libraries inside the application. The source code of Qt is available from <a href="https://download.qt.io/official_releases/qt/">download.qt.io</a>, and the license text is at <a href="https://www.gnu.org/licenses/lgpl-3.0.html">gnu.org/licenses/lgpl-3.0.html</a>. Qt is a trademark of The Qt Company Ltd. Qt WebEngine is based on Chromium and its own open-source components; see <a href="https://doc.qt.io/qt-6/qtwebengine-licensing.html">Qt WebEngine licensing</a>.</p>
+
+        <h2>ripgrep</h2>
+        <p>Project search uses <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> by Andrew Gallant and contributors, dual-licensed under the MIT License and the Unlicense.</p>
+
+        <h2>Tree-sitter and language grammars</h2>
+        <p>Syntax highlighting uses <a href="https://tree-sitter.github.io/tree-sitter/">Tree-sitter</a> and its community grammars, which are distributed under permissive licenses (mostly the MIT License). Each grammar is the work of its authors.</p>
+
+        <h2>Rust libraries</h2>
+        <p>The Pluminate core is written in Rust and uses open-source crates from <a href="https://crates.io">crates.io</a>, under licenses such as MIT and Apache-2.0.</p>
+
+        <h2>Fonts on this website</h2>
+        <ul>
+            <li><a href="https://github.com/ateliertriay/bricolage">Bricolage Grotesque</a>, SIL Open Font License 1.1.</li>
+            <li><a href="https://github.com/vercel/geist-font">Geist and Geist Mono</a>, SIL Open Font License 1.1.</li>
+        </ul>
+
+        <h2>Questions</h2>
+        <p>If you need the license text or corresponding source for a component, or think a notice is missing, email <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>.</p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <div class="footer-brand">Pluminate</div>
+                <div>A native IDE for macOS and Linux, from Landoulsi Technologies FZE LLC.</div>
+            </div>
+            <div class="footer-cols">
+                <a href="download.html">Download</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+                <a href="notices.html">Open-source notices</a>
+                <a href="plumterm.html">PlumTerm</a>
+                <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
+            </div>
+            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
+        </div>
+    </footer>
+    <script src="site.js"></script>
+</body>
+</html>

@@ -1,164 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pluminate Lite is a native, fully sandboxed code editor for macOS with syntax highlighting, fast ripgrep search and Markdown preview. No accounts, no tracking.">
-    <title>Pluminate Lite — a native code editor for macOS</title>
-    <script>(function(){var t="light";try{t=localStorage.getItem("theme")==="dark"?"dark":"light";}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>
+    <title>Pluminate: the depth of an IDE, the speed of an editor</title>
+    <meta name="description" content="Pluminate is a native IDE for macOS and Linux. Fast like an editor, deep like an IDE: search everywhere, Git, a built-in terminal, 45 languages. Free to download.">
+    <meta name="theme-color" content="#120d1b">
+    <link rel="icon" type="image/png" href="images/icon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://pluminate.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pluminate: the depth of an IDE, the speed of an editor">
+    <meta property="og:description" content="A native IDE for macOS and Linux. Free to download.">
+    <meta property="og:url" content="https://pluminate.com/">
+    <meta property="og:image" content="https://pluminate.com/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script>(function(){var t;try{t=localStorage.getItem("theme");}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.className="js";})();</script>
+    <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header>
         <div class="container">
-            <a class="brand" href="index.html">PLUMINATE</a>
-            <nav>
-                <a href="index.html#features">Features</a>
-                <a href="index.html#screenshots">Screenshots</a>
+            <a class="brand" href="index.html"><img src="images/icon-64.png" alt="" width="30" height="30">Pluminate</a>
+            <nav aria-label="Main">
+                <a href="index.html#why">Why Pluminate</a>
+                <a href="index.html#tour">Tour</a>
+                <a href="index.html#roadmap">Roadmap</a>
                 <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy</a>
                 <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+                <a class="nav-cta" href="download.html">Download</a>
             </nav>
         </div>
     </header>
-    <main>
+
+    <main id="main">
         <div class="hero">
             <div class="container">
-                <div class="pill-badge"><span class="dot"></span> Mac App Store &middot; Sandboxed Edition</div>
-                <h1>Pluminate Lite: a native code editor for macOS.</h1>
-                <p class="lead">Open the folders you choose and get straight to work: syntax highlighting, fast search powered by bundled ripgrep, Markdown preview and light and dark themes. Fully sandboxed, with no accounts and no tracking.</p>
+                <div class="pill-badge"><span class="dot"></span> Early release, free to use</div>
+                <h1>The depth of an IDE. The speed of an editor.</h1>
+                <p class="lead">Pluminate is a native IDE for macOS and Linux. It opens fast, searches your whole project instantly and understands your code, so you stay in flow as AI changes the way software gets written.</p>
                 <div class="cta-row">
-                    <!-- TODO: replace href with the Mac App Store listing URL once the app is live -->
-                    <a class="button appstore-btn" href="#TODO-mac-app-store-url">Download on the Mac App Store</a>
-                    <a class="button secondary" href="#features">See features</a>
+                    <a class="button" href="download.html">Download for free</a>
+                    <a class="button secondary" href="#tour">Take the tour</a>
                 </div>
-                <p class="cta-note">The App Store listing is not live yet.</p>
-                <img class="shot hero-shot" src="images/01-editor-dark.webp" alt="Pluminate Lite editing a TypeScript file in the dark theme, with the project tree on the left" width="1600" height="1000">
+                <p class="cta-note">Apple silicon and Intel Macs, Debian and Ubuntu. Also coming to the Mac App Store as Pluminate Lite.</p>
+                <div class="stage">
+                    <img class="shot" src="images/terminal-git.webp" alt="Pluminate with a project tree, a TypeScript file, the Git commit panel and split terminals in one dark window" width="1800" height="1138">
+                </div>
             </div>
         </div>
 
-        <section id="features" class="alt">
+        <section id="why">
             <div class="container">
-                <h2>Focused, fast and private</h2>
-                <p class="lead">Everything you need to read and edit code, and nothing running in the background.</p>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Syntax highlighting</h3>
-                        <p>Clear, readable highlighting for the languages you work in, with line numbers, code folding and indent guides.</p>
+                <h2>Most tools make you pick.</h2>
+                <p class="lead">Heavyweight IDEs give you depth but can be slow to start. Lightweight editors give you speed and leave you to assemble the rest. Pluminate is built so you do not have to choose.</p>
+                <div class="pair">
+                    <div class="pair-col">
+                        <h3>Depth that understands your project</h3>
+                        <p>The things you reach for every hour are built in and work together.</p>
+                        <ul class="facts">
+                            <li><strong>Search everywhere</strong>Find classes, files and symbols from a single box, across every project you have open.</li>
+                            <li><strong>Code navigation</strong>Jump to definitions in Kotlin and Python through language servers. More languages are on the way.</li>
+                            <li><strong>Git in the same window</strong>Commit, branches, worktrees, stashes, history and conflict resolution, with no second app.</li>
+                            <li><strong>A real terminal</strong>Tabs and split panes that start in your project folder.</li>
+                            <li><strong>Previews for what you write</strong>Markdown with Mermaid diagrams, CSV tables, images and PDFs open right in the editor.</li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <h3>Fast search</h3>
-                        <p>Search across a whole folder in an instant, powered by a bundled copy of ripgrep.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Markdown preview</h3>
-                        <p>Switch between code, split and preview views to see rendered Markdown as you write.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Light and dark themes</h3>
-                        <p>Follow the system appearance or pick a theme yourself, with editor font and size under your control.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Fully sandboxed</h3>
-                        <p>Runs inside the macOS App Sandbox and only touches the folders you open through the system open panel.</p>
-                    </div>
-                    <div class="card">
-                        <h3>No accounts, no tracking</h3>
-                        <p>No sign-in, analytics, ads or telemetry. Your code never leaves your Mac. <a href="privacy.html">Read the privacy policy</a>.</p>
+                    <div class="pair-col">
+                        <h3>Speed from the ground up</h3>
+                        <p>The editor core is written in Rust and the interface in Qt. There is no Electron shell between you and your keystrokes.</p>
+                        <ul class="facts">
+                            <li><strong>Search that keeps up</strong>Project search is built on ripgrep, so large repositories stay responsive.</li>
+                            <li><strong>Highlighting as you type</strong>Tree-sitter parsing colours your code instantly, for 45 languages, with no plugins to install.</li>
+                            <li><strong>Native on every platform</strong>A true Mac app and a true Linux app, not a web page in a window.</li>
+                            <li><strong>Every shortcut is yours</strong>A familiar IDE keymap out of the box, and any action can be rebound in Settings.</li>
+                            <li><strong>Private by default</strong>Your code stays on your machine unless you choose to send it somewhere.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="screenshots">
+        <section id="tour" class="alt">
             <div class="container">
-                <h2>See it in action</h2>
-                <p class="lead">A calm, native interface that stays out of your way.</p>
-                <div class="showcase-grid">
-                    <div class="showcase-item">
-                        <div class="showcase-desc">
-                            <h3>Write Markdown with a live preview</h3>
-                            <p>Edit the source on one side and watch the rendered document update on the other, including tables, lists and code blocks.</p>
-                        </div>
-                        <div class="showcase-shot"><img class="shot" src="images/03-markdown-split.webp" alt="Pluminate Lite in split view with Markdown source on the left and the rendered preview on the right" width="1600" height="1000" loading="lazy"></div>
-                    </div>
-                    <div class="showcase-item reverse">
-                        <div class="showcase-desc">
-                            <h3>Light or dark, your call</h3>
-                            <p>A polished light theme sits alongside the dark one, so the editor fits your desk, your room and your habits.</p>
-                        </div>
-                        <div class="showcase-shot"><img class="shot" src="images/02-editor-light.webp" alt="Pluminate Lite editing a TypeScript file in the light theme" width="1600" height="1000" loading="lazy"></div>
-                    </div>
-                    <div class="showcase-item">
-                        <div class="showcase-desc">
-                            <h3>Make it yours</h3>
-                            <p>Choose the interface theme, editor color scheme, font family, size and line height, with a live preview as you adjust.</p>
-                        </div>
-                        <div class="showcase-shot"><img class="shot" src="images/10-settings-appearance-dark.webp" alt="The Appearance settings panel with theme, color scheme and editor font options" width="1600" height="1000" loading="lazy"></div>
-                    </div>
+                <h2>A tour of the editor</h2>
+                <p class="lead">Real screenshots from the current release, taken on a small sample project.</p>
+                <div class="tabs" role="tablist" aria-label="Tour">
+                    <button type="button" class="tab" role="tab" id="tab-find" aria-controls="panel-find" aria-selected="true">Find anything</button>
+                    <button type="button" class="tab" role="tab" id="tab-git" aria-controls="panel-git" aria-selected="false" tabindex="-1">Git and terminal</button>
+                    <button type="button" class="tab" role="tab" id="tab-docs" aria-controls="panel-docs" aria-selected="false" tabindex="-1">Write and preview</button>
+                    <button type="button" class="tab" role="tab" id="tab-light" aria-controls="panel-light" aria-selected="false" tabindex="-1">Light and dark</button>
+                    <button type="button" class="tab" role="tab" id="tab-style" aria-controls="panel-style" aria-selected="false" tabindex="-1">Make it yours</button>
                 </div>
-                <div class="gallery" style="margin-top: 52px;">
-                    <figure><img class="shot" src="images/06-python-dark.webp" alt="A Python script open in Pluminate Lite with syntax highlighting" width="1600" height="1000" loading="lazy"><figcaption>Python with syntax highlighting.</figcaption></figure>
-                    <figure><img class="shot" src="images/05-markdown-light.webp" alt="Markdown file in split view in the light theme, showing a rendered table" width="1600" height="1000" loading="lazy"><figcaption>Markdown preview in the light theme.</figcaption></figure>
+                <div class="panel" role="tabpanel" id="panel-find" aria-labelledby="tab-find">
+                    <div class="panel-text">
+                        <h3>One box for classes, files and symbols</h3>
+                        <p>Type a few letters and jump straight to the interface, the file or the function you mean, in any project you have open.</p>
+                    </div>
+                    <div class="panel-shot narrow"><img class="shot" src="images/search-everywhere.webp" alt="The search dialog listing a matching interface, a file and three symbols for the query forecast" width="1360" height="560" loading="lazy"></div>
+                </div>
+                <div class="panel" role="tabpanel" id="panel-git" aria-labelledby="tab-git" hidden>
+                    <div class="panel-text">
+                        <h3>Version control and a shell, beside your code</h3>
+                        <p>See branches, worktrees, stashes and history in the side panel, and run commands in split terminals without leaving the window.</p>
+                    </div>
+                    <div class="panel-shot"><img class="shot" src="images/terminal-git.webp" alt="The commit panel on the left and two split terminal panes below a TypeScript file" width="1800" height="1138" loading="lazy"></div>
+                </div>
+                <div class="panel" role="tabpanel" id="panel-docs" aria-labelledby="tab-docs" hidden>
+                    <div class="panel-text">
+                        <h3>Write Markdown with a live preview</h3>
+                        <p>Edit the source on one side and watch the rendered page update on the other, including tables, lists, code blocks and diagrams.</p>
+                    </div>
+                    <div class="panel-shot"><img class="shot" src="images/03-markdown-split.webp" alt="Markdown source on the left and its rendered preview on the right" width="1600" height="1000" loading="lazy"></div>
+                </div>
+                <div class="panel" role="tabpanel" id="panel-light" aria-labelledby="tab-light" hidden>
+                    <div class="panel-text">
+                        <h3>A light theme that is not an afterthought</h3>
+                        <p>Follow the system appearance or choose a theme yourself. Both are designed for long days of reading code.</p>
+                    </div>
+                    <div class="panel-shot"><img class="shot" src="images/02-editor-light.webp" alt="A TypeScript file in the light theme with the project tree on the left" width="1600" height="1000" loading="lazy"></div>
+                </div>
+                <div class="panel" role="tabpanel" id="panel-style" aria-labelledby="tab-style" hidden>
+                    <div class="panel-text">
+                        <h3>Make it yours</h3>
+                        <p>Choose the interface theme, colour scheme, font, size and line height, and see the result in a live preview as you adjust.</p>
+                    </div>
+                    <div class="panel-shot"><img class="shot" src="images/10-settings-appearance-dark.webp" alt="The Appearance settings with theme, colour scheme and font options" width="1600" height="1000" loading="lazy"></div>
                 </div>
             </div>
         </section>
 
-        <section class="alt">
+        <section id="languages">
             <div class="container">
-                <h2>Get Pluminate Lite</h2>
-                <p class="lead">Coming soon to the Mac App Store. Need a hand in the meantime? Visit <a href="support.html">Support</a> or read how we handle <a href="privacy.html">privacy</a>.</p>
+                <h2>Fluent in 45 languages, and counting</h2>
+                <p class="lead">Syntax highlighting is built in for the languages you use every day. Code navigation is growing language by language.</p>
+                <ul class="langs" aria-label="Supported languages">
+                    <li>Bash</li><li>C</li><li>C++</li><li>C#</li><li>Clojure</li><li>CMake</li><li>CSS</li><li>Dart</li><li>Dockerfile</li><li>Elixir</li><li>F#</li><li>Go</li><li>GraphQL</li><li>Groovy</li><li>Haskell</li><li>HCL</li><li>HTML</li><li>Java</li><li>JavaScript</li><li>JSON</li><li>Julia</li><li>Kotlin</li><li>LESS</li><li>Lua</li><li>Makefile</li><li>Markdown</li><li>Objective-C</li><li>PHP</li><li>PowerShell</li><li>Protobuf</li><li>Python</li><li>R</li><li>Ruby</li><li>Rust</li><li>Scala</li><li>SCSS</li><li>Solidity</li><li>SQL</li><li>Svelte</li><li>Swift</li><li>TOML</li><li>TypeScript</li><li>XML</li><li>YAML</li><li>Zig</li>
+                </ul>
+                <p class="langs-note">Missing the one you need? <a href="support.html">Tell us</a>. It shapes what we build next.</p>
+            </div>
+        </section>
+
+        <section id="roadmap" class="alt">
+            <div class="container">
+                <h2>Where Pluminate is headed</h2>
+                <p class="lead">Three things come first: more programming languages, a faster IDE, and AI support that respects your code.</p>
+                <div class="road">
+                    <div class="road-col">
+                        <h3>Available now</h3>
+                        <ul>
+                            <li><strong>Highlighting for 45 languages</strong>Built in, with no plugins.</li>
+                            <li><strong>Search, Git, terminal and previews</strong>Everything in the tour above.</li>
+                            <li><strong>Navigation for Kotlin and Python</strong>Go to definition through language servers.</li>
+                            <li><strong>AI commit messages</strong>Optional. You add your own Gemini API key, and nothing is sent until you ask.</li>
+                        </ul>
+                    </div>
+                    <div class="road-col focus">
+                        <h3>In focus</h3>
+                        <ul>
+                            <li><strong>More languages, deeper support</strong>Navigation and code intelligence for more of the languages you write.</li>
+                            <li><strong>A faster IDE</strong>Startup, indexing and responsiveness on very large projects, checked on every release.</li>
+                            <li><strong>AI support</strong>Help in the editor that understands your whole project and works with the model you choose.</li>
+                        </ul>
+                    </div>
+                    <div class="road-col later">
+                        <h3>On the plan</h3>
+                        <ul>
+                            <li><strong>Debugging</strong>Breakpoints, stepping and inspecting variables. Not available yet, and not forgotten.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ai-note">
+                    <h3>Pluminate and AI</h3>
+                    <p>More and more of the code in your editor will be written with AI help. We want Pluminate to be the place where you can read, search, review and change that code quickly.</p>
+                    <p>Ideas we are exploring include inline suggestions, asking questions about your project, and reviewing AI-written changes as a diff. You will choose the model, and your code goes only where you send it.</p>
+                </div>
+                <p class="fineprint">This is direction, not a promise. Priorities and timing can change as we learn from the people using Pluminate.</p>
+            </div>
+        </section>
+
+        <section id="editions">
+            <div class="container">
+                <h2>Two ways to get Pluminate</h2>
+                <p class="lead">Pluminate Free is the full IDE as a direct download. Pluminate Lite is a focused, sandboxed editor for the Mac App Store.</p>
+                <div class="table-wrap">
+                    <table class="compare">
+                        <thead><tr><th scope="col"></th><th scope="col">Pluminate Free</th><th scope="col">Pluminate Lite</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Where to get it</th><td class="y">Direct download</td><td class="y">Mac App Store (coming soon)</td></tr>
+                            <tr><th scope="row">Platforms</th><td class="y">macOS and Linux</td><td class="y">macOS</td></tr>
+                            <tr><th scope="row">Syntax highlighting and search</th><td class="y">Yes</td><td class="y">Yes</td></tr>
+                            <tr><th scope="row">Markdown preview and themes</th><td class="y">Yes</td><td class="y">Yes</td></tr>
+                            <tr><th scope="row">Git, terminal and code navigation</th><td class="y">Yes</td><td class="n">No</td></tr>
+                            <tr><th scope="row">Embedded browser and AI commit messages</th><td class="y">Yes</td><td class="n">No</td></tr>
+                            <tr><th scope="row">Sandboxed to the folders you open</th><td class="n">No</td><td class="y">Yes</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt closer">
+            <div class="container">
+                <h2>Try it on your own code.</h2>
+                <p class="lead">Free to download. No account, and nothing to configure before you open a folder.</p>
                 <div class="cta-row">
-                    <!-- TODO: replace href with the Mac App Store listing URL once the app is live -->
-                    <a class="button appstore-btn" href="#TODO-mac-app-store-url">Download on the Mac App Store</a>
-                    <a class="button secondary" href="support.html">Support</a>
-                    <a class="button secondary" href="privacy.html">Privacy</a>
+                    <a class="button" href="download.html">Download Pluminate</a>
+                    <a class="button secondary" href="support.html">Ask a question</a>
                 </div>
             </div>
         </section>
-
-        <!-- Other editions and products: re-enable when released.
-             Preserved from the previous version of this page (Pluminate IDE Free/Pro and PlumTerm).
-        <section id="products" class="alt">
-            <div class="container">
-                <h2>Our Products</h2>
-                <p class="lead">Native software crafted for developer productivity, without Electron overhead or background bloat.</p>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Pluminate IDE</h3>
-                        <p>A native, fast IDE with project tree, syntax highlighting, integrated terminal, visual git workflow, and live Markdown preview. Available in Lite, Free, and Pro editions.</p>
-                        <div class="badges">
-                            <span class="badge">macOS</span>
-                            <span class="badge">Rust Core</span>
-                            <span class="badge">Lite · Free · Pro</span>
-                        </div>
-                        <a class="card-link" href="ide.html">Learn more about Pluminate IDE &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3>PlumTerm</h3>
-                        <p>A fast terminal emulator for developers, featuring flexible split panes, tabs, and git status tracking directly inside every terminal pane.</p>
-                        <div class="badges">
-                            <span class="badge">macOS</span>
-                            <span class="badge">Linux</span>
-                            <span class="badge">Free</span>
-                        </div>
-                        <a class="card-link" href="plumterm.html">Learn more about PlumTerm &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
     </main>
+
     <footer>
         <div class="container">
-            <span>&copy; 2026 Landoulsi Technologies FZE LLC</span>
-            <div class="footer-links">
-                <a href="index.html">Pluminate Lite</a>
+            <div>
+                <div class="footer-brand">Pluminate</div>
+                <div>A native IDE for macOS and Linux, from Landoulsi Technologies FZE LLC.</div>
+            </div>
+            <div class="footer-cols">
+                <a href="download.html">Download</a>
                 <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+                <a href="notices.html">Open-source notices</a>
+                <a href="plumterm.html">PlumTerm</a>
                 <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
             </div>
+            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
         </div>
     </footer>
     <script src="site.js"></script>

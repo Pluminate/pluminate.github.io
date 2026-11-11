@@ -1,81 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pluminate Lite collects no personal data and has no accounts, analytics, tracking or ads. Read the full privacy policy.">
-    <title>Privacy Policy — Pluminate Lite</title>
-    <script>(function(){var t="light";try{t=localStorage.getItem("theme")==="dark"?"dark":"light";}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>
+    <title>Privacy policy: Pluminate</title>
+    <meta name="description" content="How Pluminate Free, Pluminate Lite, PlumTerm and this website handle your information. Pluminate collects no personal data.">
+    <meta name="theme-color" content="#120d1b">
+    <link rel="icon" type="image/png" href="images/icon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://pluminate.com/privacy.html">
+    <script>(function(){var t;try{t=localStorage.getItem("theme");}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.className="js";})();</script>
+    <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header>
         <div class="container">
-            <a class="brand" href="index.html">PLUMINATE</a>
-            <nav>
-                <a href="index.html#features">Features</a>
-                <a href="index.html#screenshots">Screenshots</a>
+            <a class="brand" href="index.html"><img src="images/icon-64.png" alt="" width="30" height="30">Pluminate</a>
+            <nav aria-label="Main">
+                <a href="index.html#why">Why Pluminate</a>
+                <a href="index.html#tour">Tour</a>
+                <a href="index.html#roadmap">Roadmap</a>
                 <a href="support.html">Support</a>
-                <a href="privacy.html" class="active">Privacy</a>
                 <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+                <a class="nav-cta" href="download.html">Download</a>
             </nav>
         </div>
     </header>
-    <main class="doc">
-        <p><a href="index.html">&larr; Back to home</a></p>
-        <h1>Privacy Policy</h1>
-        <p>Last updated: 11 November 2026</p>
-        <p>This policy covers <strong>Pluminate Lite</strong>, the Mac App Store edition of Pluminate, and this website. The developer is <strong>Landoulsi Technologies FZE LLC</strong>.</p>
+    <main id="main" class="doc">
+        <a class="back" href="index.html">&larr; Back to home</a>
+        <h1>Privacy policy</h1>
+        <p class="meta">Last updated: 11 November 2026</p>
+        <p>This policy covers Pluminate Free, Pluminate Lite (the Mac App Store edition), PlumTerm and this website. The developer is Landoulsi Technologies FZE LLC.</p>
+
         <h2>Summary</h2>
-        <p>Pluminate Lite collects no personal data. It has no accounts, analytics, tracking or ads, and it sends no user data over the network.</p>
+        <p><strong>Pluminate collects no personal data.</strong> It has no accounts, analytics, tracking, advertising or crash reporting. Your code stays on your computer. The only time Pluminate sends anything over the network is when you use a feature that needs it, and those features are listed below.</p>
+
         <h2>Files and folders</h2>
-        <p>Pluminate Lite runs in the macOS App Sandbox. It only reads and writes the folders and files you choose to open through the system open panel. Your code and documents stay on your Mac and are never transmitted to us or to anyone else.</p>
+        <p>Pluminate reads and writes the folders and files you open. Pluminate Lite runs in the macOS App Sandbox and can only reach folders you choose through the system open panel. Your code and documents are never transmitted to us.</p>
+
         <h2>Settings and recent folders</h2>
-        <p>Your settings and list of recent folders are stored locally on your Mac and are not shared.</p>
-        <h2>This website</h2>
-        <p>This website does not use advertising trackers, analytics or cookies. It is hosted on GitHub Pages, which may process technical information such as IP addresses to serve the pages.</p>
+        <p>Your settings and your list of recent folders are stored locally on your computer and are not shared.</p>
+
+        <h2>Pluminate Free: features that use the network</h2>
+        <p>Pluminate Lite has no network features. Pluminate Free has the following, and each works only when you use it:</p>
+        <ul>
+            <li><strong>AI commit messages.</strong> If you add your own Gemini API key in Settings and ask for a commit message, Pluminate sends the changes you are committing to Google's Gemini API with that key. Google handles that data under its own terms and privacy policy. Nothing is sent if you do not add a key or do not use the feature. We never receive it. Your key is stored on your computer.</li>
+            <li><strong>Embedded browser.</strong> When you open a web page inside Pluminate, the page loads from the site you chose, like in any browser. That site may see your IP address and set cookies.</li>
+            <li><strong>Import from Chrome.</strong> If you ask Pluminate to import web data from your local Chrome profile, it is read on your computer only and is not sent to us.</li>
+            <li><strong>Git, terminal and tools you run.</strong> Commands you run, including Git operations against remote servers, are carried out by you on your own machine and talk to the hosts you choose.</li>
+        </ul>
+
+        <h2>PlumTerm</h2>
+        <p>PlumTerm collects no analytics, usage data or crash reports, and does not send your commands, files or terminal output to us. If this ever changes, it will be optional and described here first. Some optional features contact third-party services at your request, such as AI commands and pull request lookups through the GitHub CLI. Those services have their own privacy policies.</p>
+
+        <h2>This website and downloads</h2>
+        <p>This website does not use advertising trackers, analytics or cookies. Its fonts are served from the site itself, not from a third party. It is hosted on GitHub Pages, and the download files are served from GitHub Releases. GitHub may process technical information such as IP addresses to serve pages and files, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. The theme you pick is saved in your browser only.</p>
+
         <h2>When you email us</h2>
-        <p>If you email us, we receive your email address and the content of your message. We use it only to respond to you, keep it only as long as needed, and never sell it.</p>
+        <p>If you email us, we receive your email address and the content of your message. We use it only to respond to you, keep it only as long as needed to do so and to meet our legal and record-keeping obligations, and never sell it.</p>
+
         <h2>Your rights</h2>
         <p>You can ask us to access, correct or delete personal information we hold about you by emailing <a href="mailto:privacy@pluminate.com">privacy@pluminate.com</a>.</p>
+
         <h2>Changes</h2>
-        <p>If this policy changes, we will update the date above.</p>
+        <p>If this policy changes, we will update the date above. If we add a feature that collects data, we will describe it here before it ships.</p>
+
         <h2>Contact</h2>
         <p>Landoulsi Technologies FZE LLC<br>Email: <a href="mailto:privacy@pluminate.com">privacy@pluminate.com</a></p>
-        <!-- Previous policy text (covered Pluminate IDE and PlumTerm): re-enable when released.
-<main class="doc">
-        <p><a href="index.html">&larr; Back to home</a></p>
-        <h1>Privacy Policy</h1>
-        <p>Last updated: October 2026</p>
-        <p><strong>Pluminate</strong> ("we", "us"), operates this website and publishes Pluminate (including Pluminate Lite and Pluminate IDE) and PlumTerm. This policy explains what information we collect and how we use it.</p>
-        <h2>Pluminate &amp; Pluminate Lite</h2>
-        <p>Pluminate and Pluminate Lite operate entirely on your local device. We collect no personal data, analytics, tracking, telemetry, or crash reports. Your code, files, and project contents remain private on your machine and are never transmitted to our servers or any third parties. In Pluminate Lite, file access is strictly governed by the macOS App Sandbox and limited exclusively to folders you explicitly choose to open.</p>
-        <h2>PlumTerm</h2>
-        <p>PlumTerm currently collects no analytics, usage data or crash reports, and does not send your commands, files or terminal output to us. If this ever changes, it will be optional and described here first.</p>
-        <p>Some optional features contact third-party services at your request, for example the AI commands and pull request lookups through the GitHub CLI. Those services have their own privacy policies.</p>
-        <h2>This website</h2>
-        <p>This website does not use advertising trackers or analytics. If analytics are added in the future, this policy will be updated first. The site is hosted on GitHub Pages, which may process technical information such as IP addresses to serve the pages.</p>
-        <h2>When you email us</h2>
-        <p>If you email us, we receive your name, email address and the content of your message. We use it only to respond to you. We do not sell personal information.</p>
-        <h2>Retention</h2>
-        <p>We keep correspondence for as long as needed to respond to you and to meet our legal and record-keeping obligations.</p>
-        <h2>Your rights</h2>
-        <p>You can ask us to access, correct or delete personal information we hold about you by emailing plumterm@pluminate.com.</p>
-        <h2>Contact</h2>
-        <p>Pluminate<br>Email: privacy@pluminate.com</p>
-</main>
-        -->
     </main>
+
     <footer>
         <div class="container">
-            <span>&copy; 2026 Landoulsi Technologies FZE LLC</span>
-            <div class="footer-links">
-                <a href="index.html">Pluminate Lite</a>
+            <div>
+                <div class="footer-brand">Pluminate</div>
+                <div>A native IDE for macOS and Linux, from Landoulsi Technologies FZE LLC.</div>
+            </div>
+            <div class="footer-cols">
+                <a href="download.html">Download</a>
                 <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+                <a href="notices.html">Open-source notices</a>
+                <a href="plumterm.html">PlumTerm</a>
                 <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
             </div>
+            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
         </div>
     </footer>
     <script src="site.js"></script>

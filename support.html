@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get help with Pluminate Lite: contact support, find answers to common questions and learn how to report a bug.">
-    <title>Support — Pluminate Lite</title>
-    <script>(function(){var t="light";try{t=localStorage.getItem("theme")==="dark"?"dark":"light";}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>
+    <title>Support: Pluminate Free and Pluminate Lite</title>
+    <meta name="description" content="Get help with Pluminate: contact support, find answers to common questions and learn how to report a bug.">
+    <meta name="theme-color" content="#120d1b">
+    <link rel="icon" type="image/png" href="images/icon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://pluminate.com/support.html">
+    <script>(function(){var t;try{t=localStorage.getItem("theme");}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.className="js";})();</script>
+    <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header>
         <div class="container">
-            <a class="brand" href="index.html">PLUMINATE</a>
-            <nav>
-                <a href="index.html#features">Features</a>
-                <a href="index.html#screenshots">Screenshots</a>
-                <a href="support.html" class="active">Support</a>
-                <a href="privacy.html">Privacy</a>
+            <a class="brand" href="index.html"><img src="images/icon-64.png" alt="" width="30" height="30">Pluminate</a>
+            <nav aria-label="Main">
+                <a href="index.html#why">Why Pluminate</a>
+                <a href="index.html#tour">Tour</a>
+                <a href="index.html#roadmap">Roadmap</a>
+                <a href="support.html" class="active" aria-current="page">Support</a>
                 <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+                <a class="nav-cta" href="download.html">Download</a>
             </nav>
         </div>
     </header>
-    <main class="doc">
-        <p><a href="index.html">&larr; Back to home</a></p>
+    <main id="main" class="doc">
+        <a class="back" href="index.html">&larr; Back to home</a>
         <h1>Support</h1>
-        <p>Need help with Pluminate Lite? Email us and we will get back to you.</p>
+        <p>Help for Pluminate Free (the direct download for macOS and Linux) and Pluminate Lite (the Mac App Store edition). Email us and we will get back to you.</p>
         <div class="contact-card">
             <p><strong>Email:</strong> <a href="mailto:support@pluminate.com">support@pluminate.com</a></p>
             <p><strong>Reply time:</strong> we usually reply within 2 business days.</p>
@@ -34,42 +41,65 @@
         <div class="faq">
             <details>
                 <summary>How do I open a folder?</summary>
-                <p>Choose <strong>File &rsaquo; Open Folder&hellip;</strong> and select a folder in the system open panel. Pluminate Lite can only read and write folders you open this way, because it runs in the macOS App Sandbox. If a file or folder will not open, open its parent folder instead.</p>
+                <p>Choose <strong>File &rsaquo; Open Folder&hellip;</strong> and select a folder. In Pluminate Lite, which runs in the macOS App Sandbox, the app can only read and write folders you open this way. If a file or folder will not open, open its parent folder from the same menu.</p>
+            </details>
+            <details>
+                <summary>Which edition do I have?</summary>
+                <p>Pluminate Lite comes from the Mac App Store and is sandboxed. Pluminate Free is the direct download from the <a href="download.html">download page</a> and includes Git, a terminal and code navigation. The name is shown in the About window. <a href="index.html#editions">Compare the two editions</a>.</p>
+            </details>
+            <details>
+                <summary>Which Mac download do I need?</summary>
+                <p>Choose Apple menu &rsaquo; About This Mac. If the chip is Apple M1 or later, download the Apple silicon version. If it says Intel, download the Intel version.</p>
+            </details>
+            <details>
+                <summary>Which Linux systems are supported?</summary>
+                <p>Debian 13 and Ubuntu 25.04 or later, on 64-bit Intel or AMD (amd64) and 64-bit ARM (arm64). Older releases such as Ubuntu 24.04 LTS ship a version of Qt that is too old. Install with <code>sudo apt install ./pluminate_amd64.deb</code>.</p>
             </details>
             <details>
                 <summary>Where are my settings stored?</summary>
-                <p>Settings and your list of recent folders are stored on your Mac, inside the app's sandbox container. They are never sent anywhere. You can adjust them from the Settings window (<strong>Pluminate Lite &rsaquo; Settings&hellip;</strong>), which also offers a Reset to Defaults button.</p>
+                <p>On your computer only. Pluminate Lite keeps them inside its sandbox container, and Pluminate Free keeps them in your user account's standard application settings location. Nothing is sent to us. Open <strong>Settings</strong> from the Pluminate menu to change them.</p>
             </details>
             <details>
                 <summary>Why can't Pluminate Lite see my other files?</summary>
-                <p>This is by design. The App Sandbox limits the app to the folders you choose, which keeps the rest of your Mac private.</p>
+                <p>This is by design. The App Sandbox limits Pluminate Lite to the folders you choose, which keeps the rest of your Mac private.</p>
             </details>
             <details>
-                <summary>Does Pluminate Lite collect any data?</summary>
-                <p>No. There are no accounts, analytics or tracking. See the <a href="privacy.html">Privacy Policy</a>.</p>
+                <summary>Does Pluminate collect any data?</summary>
+                <p>No. There are no accounts, analytics or tracking in either edition. Pluminate Free has one optional feature that contacts an outside service when you use it. See the <a href="privacy.html">privacy policy</a>.</p>
             </details>
             <details>
                 <summary>How do I report a bug?</summary>
                 <p>Email <a href="mailto:support@pluminate.com">support@pluminate.com</a> and include:</p>
                 <ul>
-                    <li>your macOS version (Apple menu &rsaquo; About This Mac)</li>
-                    <li>the Pluminate Lite version (Pluminate Lite &rsaquo; About Pluminate Lite)</li>
+                    <li>your operating system and version (on a Mac: Apple menu &rsaquo; About This Mac)</li>
+                    <li>the Pluminate version and edition (Pluminate &rsaquo; About)</li>
                     <li>the steps that lead to the problem, what you expected and what happened</li>
                     <li>a screenshot, if it helps</li>
                 </ul>
             </details>
+            <details>
+                <summary>Can I request a language or a feature?</summary>
+                <p>Yes, please do. Email us at <a href="mailto:support@pluminate.com">support@pluminate.com</a>. Support for more languages, a faster IDE and AI features are our current priorities, and requests help us choose what comes first.</p>
+            </details>
         </div>
     </main>
+
     <footer>
         <div class="container">
-            <span>&copy; 2026 Landoulsi Technologies FZE LLC</span>
-            <div class="footer-links">
-                <a href="index.html">Pluminate Lite</a>
+            <div>
+                <div class="footer-brand">Pluminate</div>
+                <div>A native IDE for macOS and Linux, from Landoulsi Technologies FZE LLC.</div>
+            </div>
+            <div class="footer-cols">
+                <a href="download.html">Download</a>
                 <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+                <a href="notices.html">Open-source notices</a>
+                <a href="plumterm.html">PlumTerm</a>
                 <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
             </div>
+            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
         </div>
     </footer>
     <script src="site.js"></script>

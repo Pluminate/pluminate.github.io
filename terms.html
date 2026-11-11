@@ -1,74 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terms of use for the Pluminate website.">
-    <title>Terms of Use — Pluminate</title>
-    <script>(function(){var t="light";try{t=localStorage.getItem("theme")==="dark"?"dark":"light";}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>
+    <title>Terms of use: Pluminate</title>
+    <meta name="description" content="Terms for using the Pluminate website and software.">
+    <meta name="theme-color" content="#120d1b">
+    <link rel="icon" type="image/png" href="images/icon-64.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://pluminate.com/terms.html">
+    <script>(function(){var t;try{t=localStorage.getItem("theme");}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.className="js";})();</script>
+    <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header>
         <div class="container">
-            <a class="brand" href="index.html">PLUMINATE</a>
-            <nav>
-                <a href="index.html#features">Features</a>
-                <a href="index.html#screenshots">Screenshots</a>
+            <a class="brand" href="index.html"><img src="images/icon-64.png" alt="" width="30" height="30">Pluminate</a>
+            <nav aria-label="Main">
+                <a href="index.html#why">Why Pluminate</a>
+                <a href="index.html#tour">Tour</a>
+                <a href="index.html#roadmap">Roadmap</a>
                 <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy</a>
                 <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+                <a class="nav-cta" href="download.html">Download</a>
             </nav>
         </div>
     </header>
-    <main class="doc">
-        <p><a href="index.html">&larr; Back to home</a></p>
-        <h1>Terms of Use</h1>
-        <p>Last updated: 11 November 2026</p>
-        <p>This website is provided by <strong>Landoulsi Technologies FZE LLC</strong> for general information about Pluminate Lite. By using it, you agree to these terms.</p>
+    <main id="main" class="doc">
+        <a class="back" href="index.html">&larr; Back to home</a>
+        <h1>Terms of use</h1>
+        <p class="meta">Last updated: 11 November 2026</p>
+        <p>This website is provided by Landoulsi Technologies FZE LLC for general information about Pluminate. By using it, you agree to these terms.</p>
+
         <h2>Software</h2>
         <p>Pluminate Lite is distributed through the Mac App Store and is subject to Apple's Standard End User License Agreement unless a custom license is stated on its App Store listing.</p>
+        <p>Pluminate Free is provided free of charge and "as is", without warranties of any kind. To the extent permitted by law, Landoulsi Technologies FZE LLC is not liable for any loss arising from its use. All rights not expressly granted are reserved. Third-party components included in Pluminate are covered by their own licenses, listed in the <a href="notices.html">open-source notices</a>.</p>
+        <p>PlumTerm is licensed separately, under the terms published in the PlumTerm repository.</p>
+
         <h2>Intellectual property</h2>
         <p>The content of this website, including text, design and branding, belongs to Landoulsi Technologies FZE LLC or its licensors. You may not reproduce it without permission, except for personal, non-commercial use.</p>
+
         <h2>Disclaimer</h2>
-        <p>This website is provided "as is", without warranties of any kind. We do not guarantee that it will be uninterrupted or error-free.</p>
+        <p>This website is provided "as is", without warranties of any kind. We do not guarantee that it will be uninterrupted or error-free. Plans described on the website, such as upcoming features, are intentions and not commitments.</p>
+
         <h2>Limitation of liability</h2>
         <p>To the extent permitted by law, Landoulsi Technologies FZE LLC is not liable for any loss arising from your use of this website.</p>
+
         <h2>Changes</h2>
         <p>We may update these terms at any time. The date at the top of this page shows when they were last changed.</p>
+
         <h2>Contact</h2>
         <p>Landoulsi Technologies FZE LLC<br>Email: <a href="mailto:hello@pluminate.com">hello@pluminate.com</a></p>
-        <!-- Previous terms text (covered PlumTerm licensing): re-enable when released.
-<main class="doc">
-        <p><a href="index.html">&larr; Back to home</a></p>
-        <h1>Terms of Use</h1>
-        <p>Last updated: October 2026</p>
-        <p>This website is provided by <strong>Pluminate</strong>, for general information about our products. By using it, you agree to these terms.</p>
-        <h2>Software</h2>
-        <p>PlumTerm is licensed separately. The source code is under the PolyForm Strict License 1.0.0 and the compiled app is under the End-User Terms, both published in the <a href="https://github.com/pluminate/plumterm">PlumTerm repository</a>.</p>
-        <h2>Intellectual property</h2>
-        <p>The content of this website, including text, design and branding, belongs to Pluminate or its licensors. "Pluminate" and "PlumTerm" are names of the publisher. You may not reproduce the content without permission, except for personal, non-commercial use.</p>
-        <h2>Disclaimer</h2>
-        <p>This website is provided "as is", without warranties of any kind. We do not guarantee that it will be uninterrupted or error-free.</p>
-        <h2>Limitation of liability</h2>
-        <p>To the extent permitted by law, Pluminate is not liable for any loss arising from your use of this website.</p>
-        <h2>Changes</h2>
-        <p>We may update these terms at any time. The date at the top of this page shows when they were last changed.</p>
-        <h2>Contact</h2>
-        <p>Pluminate<br>Email: contact@pluminate.com</p>
-</main>
-        -->
     </main>
+
     <footer>
         <div class="container">
-            <span>&copy; 2026 Landoulsi Technologies FZE LLC</span>
-            <div class="footer-links">
-                <a href="index.html">Pluminate Lite</a>
+            <div>
+                <div class="footer-brand">Pluminate</div>
+                <div>A native IDE for macOS and Linux, from Landoulsi Technologies FZE LLC.</div>
+            </div>
+            <div class="footer-cols">
+                <a href="download.html">Download</a>
                 <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+                <a href="notices.html">Open-source notices</a>
+                <a href="plumterm.html">PlumTerm</a>
                 <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
             </div>
+            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
         </div>
     </footer>
     <script src="site.js"></script>
