@@ -47,7 +47,7 @@
   var reco = document.getElementById("reco");
   if (reco) {
     var ua = navigator.userAgent || "", plat = (navigator.platform || "") + " " + ua;
-    var os = /Mac/i.test(plat) && !/iPhone|iPad/i.test(ua) ? "mac" : /Linux|X11/i.test(plat) && !/Android/i.test(ua) ? "linux" : "";
+    var os = /Win(32|64|dows)/i.test(plat) && !/Phone/i.test(ua) ? "win" : /Mac/i.test(plat) && !/iPhone|iPad/i.test(ua) ? "mac" : /Linux|X11/i.test(plat) && !/Android/i.test(ua) ? "linux" : "";
     var arch = "";
     if (os === "linux") arch = /aarch64|arm64|armv8/i.test(plat) ? "arm64" : "amd64";
     var finish = function (key) {
@@ -59,7 +59,8 @@
       document.getElementById("reco-link").textContent = "Download " + row.getAttribute("data-ext");
       reco.hidden = false;
     };
-    if (os === "linux") finish("deb-" + arch);
+    if (os === "win") finish("win-x64");
+    else if (os === "linux") finish("deb-" + arch);
     else if (os === "mac") {
       /* Safari and Chrome hide the Mac chip, so ask for the architecture when the browser can tell us. */
       var guess = function (a) { finish(a === "arm" || a === "arm64" ? "dmg-arm64" : "dmg-x86_64"); };

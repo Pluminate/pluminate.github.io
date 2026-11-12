@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Pluminate for macOS and Linux</title>
+    <title>Download Pluminate for macOS, Windows and Linux</title>
     <meta name="description" content="Download Pluminate for free: signed and notarized for Apple silicon and Intel Macs, and as .deb packages for Debian and Ubuntu.">
     <meta name="theme-color" content="#120d1b">
     <link rel="icon" type="image/png" href="images/icon-64.png">
@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://pluminate.com/download.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Download Pluminate">
-    <meta property="og:description" content="Free for macOS (Apple silicon and Intel) and Debian or Ubuntu.">
+    <meta property="og:description" content="Free for macOS (Apple silicon and Intel), Windows 10 and 11, and Debian or Ubuntu.">
     <meta property="og:image" content="https://pluminate.com/images/og.png">
     <script>(function(){var t;try{t=localStorage.getItem("theme");}catch(e){}if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.className="js";})();</script>
     <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
@@ -37,7 +37,7 @@
         <div class="page-head">
             <div class="container">
                 <h1>Download Pluminate</h1>
-                <p>Free for macOS and Linux. The Mac builds are signed and notarized by Apple, so they open without security warnings.</p>
+                <p>Free for macOS, Windows and Linux. The Mac builds are signed and notarized by Apple, so they open without security warnings. The Windows build is new and not yet code-signed.</p>
 
                 <div class="reco" id="reco" hidden>
                     <h2>Recommended for this computer: <span id="reco-name"></span></h2>
@@ -67,6 +67,22 @@
                             <span class="file">Pluminate-x86_64.dmg</span>
                         </div>
                         <a class="button" href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-x86_64.dmg">Download .dmg</a>
+                    </li>
+                    <li class="dl-row" data-pkg="win-x64" data-label="Windows 10 and 11, 64-bit" data-ext=".exe" data-href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-x64-setup.exe">
+                        <div>
+                            <h3>Windows, 64-bit installer</h3>
+                            <p>For Windows 10 and 11 on Intel or AMD PCs. Installs for your user account, no administrator rights needed. Not code-signed yet, so Windows shows a warning on first run.</p>
+                            <span class="file">Pluminate-x64-setup.exe</span>
+                        </div>
+                        <a class="button" href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-x64-setup.exe">Download .exe</a>
+                    </li>
+                    <li class="dl-row" data-label="Windows, portable zip" data-ext=".zip" data-href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-x64.zip">
+                        <div>
+                            <h3>Windows, portable zip</h3>
+                            <p>The same app without an installer: unzip anywhere and run <code>pluminate.exe</code>.</p>
+                            <span class="file">Pluminate-x64.zip</span>
+                        </div>
+                        <a class="button secondary" href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/Pluminate-x64.zip">Download .zip</a>
                     </li>
                     <li class="dl-row" data-pkg="deb-amd64" data-label="Debian and Ubuntu, 64-bit Intel or AMD" data-ext=".deb" data-href="https://github.com/Pluminate/pluminate-releases/releases/latest/download/pluminate_amd64.deb">
                         <div>
@@ -102,6 +118,14 @@
                         </ol>
                     </div>
                     <div>
+                        <h3>Windows</h3>
+                        <ol class="steps">
+                            <li>Run <code>Pluminate-x64-setup.exe</code>.</li>
+                            <li>If Windows shows &ldquo;Windows protected your PC&rdquo;, choose <strong>More info</strong>, then <strong>Run anyway</strong>. This appears because the Windows build is not code-signed yet.</li>
+                            <li>Open Pluminate from the Start menu, then choose File &rarr; Open Folder.</li>
+                        </ol>
+                    </div>
+                    <div>
                         <h3>Debian and Ubuntu</h3>
                         <p style="color: var(--muted);">Install with apt, which also installs the Qt libraries and ripgrep it needs:</p>
                         <pre class="cmd">sudo apt install ./pluminate_amd64.deb</pre>
@@ -124,7 +148,7 @@
         <div class="container">
             <div>
                 <div class="footer-brand">Pluminate</div>
-                <div>A native IDE for macOS and Linux, from Landoulsi Technologies FZE LLC.</div>
+                <div>A native IDE for macOS, Windows and Linux, from Landoulsi Technologies FZE LLC.</div>
             </div>
             <div class="footer-cols">
                 <a href="download.html">Download</a>
@@ -135,7 +159,7 @@
                 <a href="plumterm.html">PlumTerm</a>
                 <a href="mailto:hello@pluminate.com">hello@pluminate.com</a>
             </div>
-            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
+            <p class="legal">&copy; 2026 Landoulsi Technologies FZE LLC. Mac, macOS and Mac App Store are trademarks or service marks of Apple Inc. Windows is a trademark of the Microsoft group of companies. Linux is a trademark of Linus Torvalds. Qt is a trademark of The Qt Company, and Pluminate uses Qt under the LGPL. All other names are trademarks of their respective owners and are used only to describe what Pluminate works with.</p>
         </div>
     </footer>
     <script src="site.js"></script>
